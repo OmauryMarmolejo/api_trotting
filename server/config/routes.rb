@@ -3,4 +3,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  namespace :api do
+    namespace :v1 do
+      get 'numbers/single/:number', to: 'numbers#single'
+      post 'numbers/batch', to: 'numbers#batch'
+    end
+  end
 end
