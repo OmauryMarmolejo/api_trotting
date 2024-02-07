@@ -1,5 +1,6 @@
 class Rack::Attack
-  throttle('req by ip', limit: 5, period: 5.minutes) do |request|
+  throttle('requests by ip', limit: 5, period: 5) do |request|
+    puts("request.ip: #{request.ip}")
     request.ip
   end
 end

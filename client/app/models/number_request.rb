@@ -1,0 +1,2 @@
+class NumberRequest < ApplicationRecord
+end
